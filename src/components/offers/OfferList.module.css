@@ -1,0 +1,11 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin-top: 150px;
+}
