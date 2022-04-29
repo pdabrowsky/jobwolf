@@ -57,7 +57,6 @@ const useOffers = () => {
 	useEffect(() => {
 		fetchOffers();
 	}, [fetchOffers]);
-	console.log(data);
 
 	return { fetchOffers, data };
 };

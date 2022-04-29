@@ -1,8 +1,8 @@
 import { Offer as OfferComponent } from "./Offer";
+import { SearchBar } from "./SearchBar";
 import css from "./OfferList.module.css";
 import { useOffers } from "./useOffers";
 
-// https://github.com/mateuszs/it-jobs-node
 // https://github.com/ohmyzsh/ohmyzsh
 
 const OfferList = () => {
@@ -10,6 +10,7 @@ const OfferList = () => {
 
 	return (
 		<div className={css.wrapper}>
+			<SearchBar />
 			<ul className={css.list}>
 				{data.map((offer) => {
 					return (

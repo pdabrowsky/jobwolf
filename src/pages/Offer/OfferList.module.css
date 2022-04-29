@@ -1,11 +1,15 @@
 .wrapper {
 	display: flex;
+	flex-direction: column;
+	width: 100%;
 	justify-content: center;
+	align-items: center;
+	margin-top: 160px;
 }
 
 .list {
 	display: flex;
+	max-width: 1000px;
 	flex-direction: column;
 	list-style: none;
-	margin-top: 150px;
 }

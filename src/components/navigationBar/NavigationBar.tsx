@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Burger } from "./Burger";
 import { Logo } from "./Logo";
-import cs from "classnames";
+import { Nav } from "./Nav";
 import css from "./NavigationBar.module.css";
 
 // react-router-dom // react-router
@@ -18,34 +17,7 @@ const NavigationBar = () => {
 	return (
 		<header className={css["navigation-bar"]}>
 			<Logo />
-			<nav className={css["menu-list-wrapper"]}>
-				<ul
-					className={cs(css["menu-list"], {
-						[css["nav-active"]]: active,
-					})}
-				>
-					<li>
-						<Link className={css.link} to="/">
-							Offers
-						</Link>
-					</li>
-					<li>
-						<Link className={css.link} to="/favorite">
-							Favorite
-						</Link>
-					</li>
-					<li>
-						<Link className={css.link} to="/post">
-							Post a Job
-						</Link>
-					</li>
-					<li>
-						<Link className={css.link} to="/sing-in">
-							Sing in
-						</Link>
-					</li>
-				</ul>
-			</nav>
+			<Nav active={active} />
 			<Burger active={active} onActive={onActive} />
 		</header>
 	);

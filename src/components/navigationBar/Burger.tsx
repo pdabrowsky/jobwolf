@@ -2,12 +2,12 @@ import React from "react";
 import cs from "classnames";
 import css from "./Burger.module.css";
 
-type props = {
+type Props = {
 	onActive: () => void;
 	active: boolean;
 };
 
-const Burger = ({ active, onActive }: props) => {
+const Burger = ({ active, onActive }: Props) => {
 	return (
 		<div className={css.burger} onClick={onActive}>
 			<div

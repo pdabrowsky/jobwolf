@@ -1,0 +1,10 @@
+.input {
+	min-width: 400px;
+	max-width: 600px;
+	min-height: 30px;
+	margin-bottom: 40px;
+	border-color: gold;
+}
+.input > div {
+	border-color: black;
+}

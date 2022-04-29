@@ -1,23 +1,24 @@
-import React, { useEffect } from "react";
-import { NavigationBar } from "./components/navigationBar/NavigationBar";
-import { OfferList } from "./components/offers/OfferList";
+import React from "react";
+import { NavigationBar } from "./components/NavigationBar/NavigationBar";
+import { Offers } from "./pages/Offer/Offers";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// TODO: read
-// https://stackoverflow.com/questions/51974369/what-is-the-difference-between-hashrouter-and-browserrouter-in-react
+import { ConfigContext, useConfig } from "./components/ConfigContext";
+import { Post } from "./pages/Post/Post";
 
 // x.y.z html kotwica
-
-// TODO: eslint https://github.com/yannickcr/eslint-plugin-react https://eslint.org/docs/rules/
 // Formik, ReactForms
 
 function App() {
+	const { data } = useConfig();
 	return (
 		<Router>
 			<NavigationBar />
-			<Routes>
-				<Route path="/" element={<OfferList />} />
-			</Routes>
+			<ConfigContext.Provider value={data}>
+				<Routes>
+					<Route path="/" element={<Offers />} />
+					<Route path="post" element={<Post />} />
+				</Routes>
+			</ConfigContext.Provider>
 		</Router>
 	);
 }

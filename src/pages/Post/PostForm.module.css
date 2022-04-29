@@ -1,0 +1,61 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: 15vh auto 0;
+	width: 80%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+.title,
+.companyName,
+.companyCity,
+.duration,
+.seniority,
+.description {
+	display: flex;
+	flex-direction: column;
+}
+
+.title,
+.companyName,
+.companyCity,
+.duration,
+.seniority,
+.description,
+.benefits,
+.categories,
+.salary {
+	margin-top: 6px;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		margin: 15vh auto 0;
+		width: 40%;
+	}
+	.submit {
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+		width: 100%;
+	}
+	.submit button {
+		padding: 5px 20%;
+	}
+	.salary input {
+		width: 20%;
+	}
+}
