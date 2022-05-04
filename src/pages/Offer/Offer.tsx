@@ -2,9 +2,7 @@ import React from "react";
 import css from "./Offer.module.css";
 import { Offer as OfferType } from "./types";
 
-type Props = OfferType;
-
-//https://github.com/facebook/create-react-app/pull/8177
+type Props = Omit<OfferType, "id">;
 
 const Offer = ({
 	companyCity,

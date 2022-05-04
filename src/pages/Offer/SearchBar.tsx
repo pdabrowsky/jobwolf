@@ -16,7 +16,7 @@ const SearchBar = () => {
 	}));
 
 	const handleChange = (event: Options<{ label: string; value: number }>) => {
-		setSelectedCategories((state) => {
+		setSelectedCategories(() => {
 			const values = event.map((el) => {
 				return {
 					id: el.value,

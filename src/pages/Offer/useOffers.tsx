@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
+import { Offer } from "./types";
 
 type OfferResponse = {
 	id: number;
@@ -14,15 +15,6 @@ type OfferResponse = {
 	seniority_name: string;
 	thumb: string;
 	title: string;
-};
-
-type Offer = {
-	id: number;
-	companyName: string;
-	categories: { name: string; id: number }[];
-	salary: { name: string; salaryFrom: number; salaryTo: number }[];
-	title: string;
-	companyCity: string;
 };
 
 const mapResponse = (data: OfferResponse): Offer => ({
@@ -43,6 +35,8 @@ const useOffers = () => {
 
 	const fetchOffers = useCallback(async () => {
 		try {
+			// URLSearchParams   &category=2
+
 			const res = await fetch(
 				"http://localhost:4000/offers?page=1&limit=10&order_by=id&sort_direction=desc"
 			);

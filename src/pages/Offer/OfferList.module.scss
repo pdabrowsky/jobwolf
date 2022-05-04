@@ -1,0 +1,10 @@
+.list {
+	display: flex;
+	max-width: 1000px;
+	flex-direction: column;
+	list-style: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+}

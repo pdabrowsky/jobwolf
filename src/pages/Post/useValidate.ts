@@ -1,6 +1,11 @@
 import { useState } from "react";
-import { FormDataErrors, Validation, Validations, Validators } from "./types";
-import { parseDate } from "./utils";
+import {
+	FormDataErrors,
+	Validation,
+	Validations,
+	Validators,
+	ValidationFn,
+} from "./types";
 
 const noEmpty = (value: string) => {
 	return value.trim() !== "";
@@ -21,23 +26,19 @@ const notPastDate = (value: Date) => {
 const validations: Validations = {
 	[Validation.NO_EMPTY]: {
 		message: "To pole jest wymagane",
-		// @ts-ignore
-		fn: noEmpty,
+		fn: noEmpty as ValidationFn,
 	},
 	[Validation.NOT_LONGER_THAN]: {
 		message: "Pole nie może być dłuższe niż 20",
-		// @ts-ignore
-		fn: notLongerThan,
+		fn: notLongerThan as ValidationFn,
 	},
 	[Validation.NOT_SHORTER_THAN]: {
 		message: "Pole nie może być krótsze niż 5",
-		// @ts-ignore
-		fn: notShorterThan,
+		fn: notShorterThan as ValidationFn,
 	},
 	[Validation.NOT_PAST_DATE]: {
 		message: "Data nie może być z przeszłości",
-		// @ts-ignore
-		fn: notPastDate,
+		fn: notPastDate as ValidationFn,
 	},
 };
 

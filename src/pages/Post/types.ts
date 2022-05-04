@@ -52,20 +52,20 @@ export enum Validation {
 	NOT_PAST_DATE,
 }
 
-type Validations = Record<
-	Validation,
-	{
-		message: string;
-		//todo  | Date
-		fn: (value: string | Date, arg?: number) => boolean;
-	}
->;
+type ValidationFn = (value: string | Date, arg?: number) => boolean;
+type ValidationRule = {
+	message: string;
+	fn: ValidationFn;
+};
+
+type Validations = Record<Validation, ValidationRule>;
 
 type Validators = Partial<
 	Record<keyof FormData, (keyof Validations | [keyof Validations, number])[]>
 >;
 
 export type {
+	ValidationFn,
 	FormData,
 	OfferRequest,
 	Select,

@@ -1,4 +1,3 @@
-import React from "react";
 import cs from "classnames";
 import css from "./Burger.module.css";
 
