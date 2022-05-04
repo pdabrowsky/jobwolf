@@ -1,5 +1,5 @@
 import { Offer as OfferComponent } from "./Offer";
-import css from "./OfferList.module.scss";
+import css from "./OfferList.module.css";
 import { useOffers } from "./useOffers";
 
 const OfferList = () => {
