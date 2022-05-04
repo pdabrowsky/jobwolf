@@ -2,6 +2,7 @@
 
 Aplikacja inspirowana portalem justjoin służąca do wyszukiwania i dodawania ofert pracy.
 
+
 ## Funkcjonalności
 
 -   Wyświetlanie listy ofert
@@ -9,6 +10,7 @@ Aplikacja inspirowana portalem justjoin służąca do wyszukiwania i dodawania o
 -   Filtrowanie / sortowanie ofert - inProgres
 -   Rejestracja / Logowanie - inProgres
 -   Aplikowanie na oferty - inProgres
+
 
 ## Uruchomienie
 
