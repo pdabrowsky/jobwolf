@@ -1,4 +1,4 @@
-## JobWolf - inProgres
+## JobWolf - w trakcie
 
 Aplikacja inspirowana portalem justjoin służąca do wyszukiwania i dodawania ofert pracy.
 
@@ -7,9 +7,9 @@ Aplikacja inspirowana portalem justjoin służąca do wyszukiwania i dodawania o
 
 -   Wyświetlanie listy ofert
 -   Dodawanie ofert
--   Filtrowanie / sortowanie ofert - inProgres
--   Rejestracja / Logowanie - inProgres
--   Aplikowanie na oferty - inProgres
+-   Filtrowanie / sortowanie ofert - w trakcie
+-   Rejestracja / Logowanie - w trakcie
+-   Aplikowanie na oferty - w trakcie
 
 
 ## Uruchomienie
